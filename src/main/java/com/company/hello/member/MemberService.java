@@ -1,8 +1,10 @@
 package com.company.hello.member;
 
 import lombok.extern.log4j.Log4j2;
+import org.springframework.stereotype.Service;
 
 @Log4j2
+@Service
 public class MemberService {
 
     public int signUpConfirm(MemberVo memberVo) {
