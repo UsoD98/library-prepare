@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class MemberController {
 
+    MemberService memberService = new MemberService();
+
     @RequestMapping("/signUp")
     public String signUp() {
         log.info("signUp");
@@ -28,6 +30,8 @@ public class MemberController {
         log.info("m_pw: " + memberVo.getM_pw());
         log.info("m_mail: " + memberVo.getM_mail());
         log.info("m_phone: " + memberVo.getM_phone());
+
+        memberService.signUpConfirm(memberVo);
 
         return null;
     }
