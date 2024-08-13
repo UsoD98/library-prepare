@@ -21,8 +21,13 @@ public class MemberController {
     }
 
     @RequestMapping("/signUpConfirm")
-    public String signUpConfirm() {
+    public String signUpConfirm(MemberVo memberVo) {
         log.info("[MemberController] signupConfirm()");
+
+        log.info("m_id: " + memberVo.getM_id());
+        log.info("m_pw: " + memberVo.getM_pw());
+        log.info("m_mail: " + memberVo.getM_mail());
+        log.info("m_phone: " + memberVo.getM_phone());
 
         return null;
     }
