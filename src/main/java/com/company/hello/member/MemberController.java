@@ -20,4 +20,11 @@ public class MemberController {
         return "sign_in";
     }
 
+    @RequestMapping("/signUpConfirm")
+    public String signUpConfirm() {
+        log.info("[MemberController] signupConfirm()");
+
+        return null;
+    }
+
 }

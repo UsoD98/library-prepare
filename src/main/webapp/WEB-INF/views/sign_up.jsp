@@ -11,6 +11,14 @@
     <title>Title</title>
 </head>
 <body>
-    This page is SIGN_UP
+<h3>This page is SIGN_UP</h3>
+<form action="/signUpConfirm">
+    ID      : <input type="text" name="m_id"><br>
+    PW      : <input type="password" name="m_pw"><br>
+    MAIL    : <input type="text" name="m_mail"><br>
+    PHONE   : <input type="text" name="m_phone"><br>
+    <input type="submit" value="SIGN UP">
+    <input type="reset" value="CANCEL">
+</form>
 </body>
 </html>
