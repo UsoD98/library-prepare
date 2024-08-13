@@ -35,7 +35,7 @@ public class MemberController {
 
         memberService.signUpConfirm(memberVo);
 
-        return null;
+        return "sign_up_ok";
     }
 
 }
