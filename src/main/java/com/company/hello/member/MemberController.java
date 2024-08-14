@@ -38,4 +38,17 @@ public class MemberController {
         return "sign_up_ok";
     }
 
+    @RequestMapping("/signInConfirm")
+    public String signInConfirm(MemberVo memberVo) {
+        log.info("[MemberController] signInConfirm()");
+
+        MemberVo signInedMember = memberService.signInConfirm(memberVo);
+
+        if (signInedMember != null) {
+            log.info("Login Success");
+            return "sign_in_ok";
+        } else {
+            return "sign_in_ng";
+        }
+    }
 }

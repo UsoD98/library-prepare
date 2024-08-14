@@ -24,4 +24,12 @@ public class MemberService {
         return 0;
     }
 
+    public MemberVo signInConfirm(MemberVo memberVo) {
+        log.info("[MemberService] signInConfirm()");
+
+        MemberVo signInedMember = memberDao.selectMember(memberVo);
+
+        return signInedMember;  // 로그인 성공 시 회원 정보 반환, 실패 시 null 반환
+    }
+
 }
